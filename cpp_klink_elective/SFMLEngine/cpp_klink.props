@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <SFMLLibDir>D:\Libraries\SFML-2.5.1\lib</SFMLLibDir>
+    <SFMLIncludeDir>D:\Libraries\SFML-2.5.1\include</SFMLIncludeDir>
+    <SFMLLibrariesRelease>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;sfml-window.lib;sfml-main.lib;</SFMLLibrariesRelease>
+    <SFMLLibrariesDebug>sfml-graphics-d.lib;sfml-window-d.lib;smfl-system-d.lib;sfml-window-d.lib;sfml-main-d.lib;</SFMLLibrariesDebug>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile />
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SFMLIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SFMLLibDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SFMLLibrariesRelease);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="SFMLLibDir">
+      <Value>$(SFMLLibDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="SFMLIncludeDir">
+      <Value>$(SFMLIncludeDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="SFMLLibrariesRelease">
+      <Value>$(SFMLLibrariesRelease)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="SFMLLibrariesDebug">
+      <Value>$(SFMLLibrariesDebug)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
